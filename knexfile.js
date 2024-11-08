@@ -1,12 +1,8 @@
-// Update with your config settings.
-const path = require ("path");
+const path = require("path");
 require("dotenv").config();
 const { DATABASE_URL } = process.env;
-/**
- * @type { Object.<string, import("knex").Knex.Config> }
- */
-module.exports = {
 
+module.exports = {
   development: {
     client: "postgresql",
     connection: DATABASE_URL,
@@ -14,5 +10,4 @@ module.exports = {
       directory: path.join(__dirname, "src", "db", "migrations"),
     },
   },
-
 };
